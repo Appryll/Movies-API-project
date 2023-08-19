@@ -13,7 +13,7 @@
 
 ### Mise en place du projet<a name="local"></a>
 
-#### I) Windows : <a name="windows"></a
+#### - Windows : <a name="windows"></a
 Dans Windows Powershell, naviguer vers le dossier souhaité.
 
 ###### - Récupération du projet :
@@ -45,7 +45,7 @@ Dans Windows Powershell, naviguer vers le dossier souhaité.
     deactivate
 
 -----
-#### II) MacOS, Linux : <a name="macl"></a
+#### - MacOS, Linux :<a name="macl"></a
 Dans le terminal, naviguer vers le dossier souhaité.
 
 ###### - Récupération du projet :
