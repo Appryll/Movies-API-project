@@ -5,8 +5,8 @@
 ## Résumé
 ## Index
 1. [Mise en place du projet](#local)
-    1.1 [Windows](#windows)
-    1.2 [MacOS, Linux](#macl)
+    - [Windows](#windows)
+    - [MacOS, Linux](#macl)
 2. [Remplir la bdd](bdd)
 3. [Documentation de l'API](#swagger)
 4. [Test Unitaires](#test)
