@@ -1,0 +1,4 @@
+env/
+__pycache__/
+migrations/
+data/movies_data.csv
