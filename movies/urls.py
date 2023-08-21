@@ -1,5 +1,6 @@
 from rest_framework import routers
-from .views import MoviesViewSet, MovieListTitleDescriptionFilter
+
+from .views import MovieListTitleDescriptionFilter, MoviesViewSet
 
 router = routers.DefaultRouter()
 

@@ -1,5 +1,7 @@
 import django_filters
+
 from .models import Movies
+
 
 class MoviesFilter(django_filters.FilterSet):
     genres = django_filters.CharFilter(field_name='genres', lookup_expr='icontains')

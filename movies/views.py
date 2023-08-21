@@ -1,21 +1,21 @@
-from .models import Movies
-from .serializers import MoviesSerializer
-from rest_framework import viewsets, permissions, filters
-from rest_framework.pagination import PageNumberPagination
-from rest_framework.generics import ListAPIView
+from django.db.models import Q
+from django.shortcuts import redirect, render
 from django_filters.rest_framework import DjangoFilterBackend
 from drf_yasg.utils import swagger_auto_schema
-from .filters import MoviesFilter
-from django.shortcuts import render, redirect
+from rest_framework import filters, permissions, viewsets
+from rest_framework.generics import ListAPIView
+from rest_framework.pagination import PageNumberPagination
 from rest_framework.response import Response
-from django.db.models import Q
+
+from .filters import MoviesFilter
+from .models import Movies
+from .serializers import MoviesSerializer
 
 # Pagination
 class MovieSetPagination(PageNumberPagination):
     page_size = 10
     page_size_query_param = 'page_size'
     max_page_size = 1000
-
 
 class MoviesViewSet(viewsets.ModelViewSet):
     """
