@@ -7,7 +7,7 @@ class Movies(models.Model):
     release_date = models.DateField(auto_now_add=True)
     vote_average = models.FloatField(default=0.0)
     vote_count = models.PositiveBigIntegerField()
-
+    
     class Meta:
         ordering = ['id']
 

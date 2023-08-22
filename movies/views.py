@@ -51,10 +51,12 @@ class MovieListTitleDescriptionFilter(viewsets.ModelViewSet):
     queryset = Movies.objects.all()
 
     # only the GET method will be shown in Swagger
-    @swagger_auto_schema(operation_description="partial_update description override", responses={200: MoviesSerializer, 404: 'slug not found'})
+    @swagger_auto_schema(operation_description="partial_update description override", 
+                        responses={200: MoviesSerializer, 404: 'slug not found'})
     def retrieve(self, request, *args, **kwargs):
         params = kwargs
-        print(params)
-        movies = Movies.objects.filter( Q(title__icontains=params['pk']) | Q(description__icontains=params['pk']))
+        #print(params)
+        # iexact --> case insensitive match
+        movies = Movies.objects.filter( Q(title__iexact=params['pk']) | Q(description__iexact=params['pk']))
         serializers= MoviesSerializer(movies, many=True)
         return Response(serializers.data)
